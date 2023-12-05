@@ -1,10 +1,20 @@
 # INST377-Group27Project
 --- to be removed----
+- tasks
+selina: about us & help 
+larissa: CSS/ make it look nice 
+ethan: api intergration
+
 api uses: 
   - get quotes when page load
   - toggle between text and image quote
   - use key word
-  - 
+  - get random quote
+
+about us, help/contact, quote pages
+
+minimalist design, not overstimulated
+fun CSS custom buttons
 --------------
 title: University quotes
 
