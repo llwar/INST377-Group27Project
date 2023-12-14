@@ -3,6 +3,14 @@
 <head>
     <title>Home Page</title>
     <style>
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
         body {
             background-color:#8996b3;
             margin: 0;
@@ -119,21 +127,46 @@
 
     <!-- Homepage Content -->
     <h1>U n i v e r s i t y .  Q u o t e s</h1>
-
+    <p>Inspirational quotes provided by <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a></p>
+    <div class="quote-box">
     <div id="quote-container">
-        <div class="quote-box">
-            <blockquote id="quote"></blockquote>
+        
+        <div class="center">
+            <img id="zenIMG">
+            <button id="fetchEM">Click to show a Zen Quote!</button>
+            
         </div>
-        <p>Inspirational quotes provided by <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a></p>
+        <br><br><br><br><br><br>
+        </div>
+        
     </div>
     
+    <script>
+
+        
+
     
+       function fetchImage(){
+        image = fetch("https://zenquotes.io/api/image")
+        .then(response =>response.blob())
+        .then((blob) =>{
+            const imgURL = URL.createObjectURL(blob)
+            const imgE = document.getElementById("zenIMG")
+            imgE.src = imgURL;
+            const imgDiv = document.getElementById("quote-container")
+            imgDiv.appendChild(imgE)
+        })
+       }
 
- <!-- buttons for dogs and stocks -->
-    <div class="button-container">
-        <a href="/Users/selinaliu/Downloads/INST377/assignment-2-seliuna/stocks.html" class="button-56">Quotes</a>
+       
+         document.getElementById("fetchEM").onclick = function (){fetchImage()}
+        
+       
 
-    </div>
+            
+    </script>
+
+
 
   
 </body>
