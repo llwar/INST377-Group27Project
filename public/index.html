@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src = "home.js" defer></script>
+    <title>Home Page</title>
+    <link type ="text/css" rel="stylesheet" href="stylePage.CSS">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav  id="navBar">
+        <ul>
+            <li><a href="index.html">index</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="documentation.html">documentation</a></li>
+        </ul>
+    </nav>
+    
+
+
+
+    <!-- Homepage Content -->
+    <h1>Index</h1>
+    <h1>U n i v e r s i t y .  Q u o t e s</h1>
+    <div class="quote-box">
+        <div id="quote-container">
+           
+            <div class="center">
+                <img id="zenIMG">
+                <button id="fetchEM" class="button-56">Click to Show a Zen Quote!</button>
+               
+            </div>
+            <br><br><br><br><br><br>
+            </div>
+           
+        </div>
+    <h3>Join the community, please fill out the form</h3>
+    <form onsubmit="addUser(); return false;">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+        <br>
+        <input type="submit" name="Submit">
+        <hr>
+    </form>
+
+    <h3>Other Users</h3>
+    
+    
+
+
+
+  <script>
+    //api image function: code foundation was partially from this website: https://rapidapi.com/guides/fetch-images-with-fetch-api
+function fetchImage(){
+    image = fetch("https://zenquotes.io/api/image")
+    .then(response =>response.blob())
+    .then((blob) =>{
+        const imgURL = URL.createObjectURL(blob)
+        const imgE = document.getElementById("zenIMG")
+        imgE.src = imgURL;
+        const imgDiv = document.getElementById("quote-container")
+        imgDiv.appendChild(imgE)
+    })
+   }
+
+
+   
+     document.getElementById("fetchEM").onclick = function (){fetchImage()}
+  </script>
+</body>
+
+</html>
