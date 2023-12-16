@@ -96,9 +96,14 @@ h1 {
         padding: 0 40px;
     }
 }
-    .quote-box {
-                background-color: #274c79; 
-                border-radius: 8px; 
-                padding: 20px; 
-                margin: 20px 0; 
-    }
+
+.quote-box {
+    background-color: #274c79; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 20px 0; 
+}
+
+
+
+
