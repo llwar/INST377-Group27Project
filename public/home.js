@@ -96,6 +96,7 @@ async function addUser() {
             "Content-type": "application/json"
         }
     })
+    
     await getUsers();
 }
 
