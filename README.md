@@ -1,16 +1,5 @@
 # INST377-Group27Project
 
-
-api uses: 
-  - get quotes when page load
-  - toggle between text and image quote
-  - use key word
-  - get random quote
-
-about us, help/contact, quote pages
-
-minimalist design, not overstimulated
-fun CSS custom buttons
 --------------
 title: University quotes
 
@@ -80,7 +69,9 @@ Code Guidelines
 Front End:
 Uses FetchAPI for data loading.
 Styled using contemporary CSS with flexbox.
-Utilizes a JavaScript library LARISSA EDIT HERE.
+Utilizes a JavaScript library anime.js installed through npm.
+Connect to library specific JS file.
+Create items with HTML, format with CSS, and animate with JS functions.
 Back End:
 Connects to Supabase for data storage.
 Implements two API endpoints for fetching data.
