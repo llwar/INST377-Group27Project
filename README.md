@@ -75,9 +75,7 @@ Create items with HTML, format with CSS, and animate with JS functions.
 Back End:
 Connects to Supabase for data storage.
 Implements two API endpoints for fetching data.
-Extra Credit Features
-Implemented dynamic updates using React for the front end.
-Utilized advanced CSS animations for a visually appealing user experience.
+
 
 
 
